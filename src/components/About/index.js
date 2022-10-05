@@ -1,7 +1,7 @@
 import React from 'react';
 import profileImage from "../../assets/images/7294BEBE-0D1F-4373-A919-8924F5306D9F.jpg";
 
-function About() {
+const About = () => {
   return (
     <section>
         <img src={profileImage} alt="profile"/>
