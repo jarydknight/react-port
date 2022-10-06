@@ -1,25 +1,18 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
-const Nav = () => {
+const Nav = (props) => {
 
-    const categories = [
-        {
-            name: "About"
-        },
-        {
-            name: "Portfolio"
-        },
-        {
-            name: "Contact"
-        },
-        {
-            name: "Resume"
-        }
-    ];
+    const {
+        categories = [],
+        setCurrentCategory,
+        currentCategory,
+        contactSelected,
+        setContactSelected,
+    } = props;
 
-    const categorySelected = (name) => {
-        console.log(name)
-    };
+    useEffect(() => {
+        document.title = currentCategory.name;
+    }, [currentCategory])
 
     return (
         <header>
@@ -32,12 +25,18 @@ const Nav = () => {
                 <ul>
                     {categories.map((category) => (
                     
-                        <li key={category.name}>
-                            <span onClick={() => categorySelected(category.name)}>
+                        <li className={`${currentCategory.name === category.name && !contactSelected && 'navActive'}`} key={category.name}>
+                            <span onClick={() => {
+                                setCurrentCategory(category)
+                                setContactSelected(false);
+                            }}>
                                 {category.name}
                             </span>
                         </li>
                     ))}
+                     <li className={`mx-2 ${contactSelected && "navActive"}`}>
+                        <span onClick={() => setContactSelected(true)}>Contact</span>
+                    </li>
                 </ul>
             </nav>
         </header>
