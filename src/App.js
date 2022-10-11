@@ -3,6 +3,7 @@ import './App.css';
 import Nav from './components/Nav';
 import Gallery from './components/Gallery';
 import ContactForm from './components/Contact';
+import Footer from './components/Footer'
 
 function App() {
 
@@ -45,6 +46,8 @@ const [contactSelected, setContactSelected] = useState(false);
           </>
         )}
       </main>
+
+      <Footer></Footer>
     </div>
   );
 }

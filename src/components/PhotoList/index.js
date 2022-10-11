@@ -33,6 +33,18 @@ const PhotoList = ({ category }) => {
         repo: "https://github.com/jarydknight/note-taker",
       },
       {
+        name: "Work Day Scheduler",
+        categgory: "Portfolio",
+        deployed: "https://jarydknight.github.io/work-day-scheduler/",
+        repo: "https://github.com/jarydknight/work-day-scheduler",
+      },
+      {
+        name: "Weather Dashboard",
+        category: "Portfolio",
+        deployed: "https://jarydknight.github.io/weather-dashboard/",
+        repo: "https://github.com/jarydknight/weather-dashboard",
+      },
+      {
         name: "",
         category: "Resume",
         deployed: "",
