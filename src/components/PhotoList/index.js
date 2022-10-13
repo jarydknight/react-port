@@ -45,6 +45,12 @@ const PhotoList = ({ category }) => {
         repo: "https://github.com/jarydknight/weather-dashboard",
       },
       {
+        name: "Tournament Bracket",
+        category: "Portfolio",
+        deployed: "https://gentle-inlet-68782.herokuapp.com/",
+        repo: "https://github.com/jcgcristel/tournament-bracket"
+      },
+      {
         name: "",
         category: "Resume",
         deployed: "",
